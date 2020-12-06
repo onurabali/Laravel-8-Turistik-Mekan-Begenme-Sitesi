@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'My Laravel Journey Page')
+@section('title', 'My Laravel Journey and Travel Page Github')
 @section('description')
     Türkiyenin en iyi turizm sitesi.
 @endsection
