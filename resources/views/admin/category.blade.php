@@ -5,6 +5,7 @@
 
 @section('content')
     <body>
+    <section class="content-header">
     <div class="container-scroller">
         <!-- partial:../../partials/_navbar.html -->
         <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -13,13 +14,15 @@
 
             </div>
         </nav>
+    </section>
         <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <!-- partial:../../partials/_sidebar.html -->
+        <div class="card-header">
+            <h3 class="card-title">Category List</h3>
+            <a class="btn btn-primary btn-fw" href="{{route('admin_category_add')}}">Add Category</a>
 
-            <!-- partial -->
-            <div class="main-panel">
-                <div class="content-wrapper">
+        </div>
+            <div class="card">
+                <div class="card-body">
                     <table class="table">
                         <thead>
                         <tr>
@@ -33,15 +36,15 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($datalist as $rs  )
-                            <p></p>
+                        @foreach($datalist as $rs)
+
                         <tr>
                             <td>{{ $rs->id }}</td>
                             <td>{{ $rs->title }}</td>
                             <td>{{ $rs->parent_id}}</td>
                             <td>{{ $rs->status}}</td>
-                            <td>{{ $rs->status}}</td>
-                            <td>{{ $rs->status}}</td>
+                            <td><a href="{{route('admin_category_edit',['id'=>$rs->id])}}"  >Edit</a></td>
+                            <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('are you sure?')" >Delete</a></td>
 
 
                         </tr>
@@ -54,7 +57,7 @@
                 <!-- partial:../../partials/_footer.html -->
             </div>
         </div>
-    </div>
+
     </body>
 @endsection
 @section('footer')

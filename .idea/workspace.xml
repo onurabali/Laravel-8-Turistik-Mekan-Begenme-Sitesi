@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12d04b43-9bae-4d9e-835c-3c62673a9551" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_115801_create_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/_blank.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/StarAdmin-Free-Bootstrap-Admin-Template-master/src/pages/samples/blank-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/StarAdmin-Free-Bootstrap-Admin-Template-master/src/pages/samples/blank-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +190,11 @@
       <workItem from="1608903543602" duration="525000" />
       <workItem from="1608912043019" duration="4161000" />
       <workItem from="1608928681471" duration="6791000" />
-      <workItem from="1608983471360" duration="10397000" />
+      <workItem from="1608983471360" duration="10563000" />
+      <workItem from="1609084275202" duration="69000" />
+      <workItem from="1609175034870" duration="2289000" />
+      <workItem from="1609180312297" duration="6808000" />
+      <workItem from="1609245283510" duration="3026000" />
     </task>
     <task id="LOCAL-00001" summary="index Changed">
       <created>1607274798241</created>
@@ -214,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608903823540</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Database Eklendi">
+      <created>1608995407741</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608995407741</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,36 +226,37 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="index Changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="index Changed" />
+    <MESSAGE value="Database Eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database Eklendi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608991994693">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1608991994693" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1608903809703">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1608995406618">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1608903809703" />
-    <state x="517" y="300" key="NewPhpFileDialog" timestamp="1608988676525">
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1608995406618" />
+    <state x="517" y="300" key="NewPhpFileDialog" timestamp="1609179248641">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="517" y="300" key="NewPhpFileDialog/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1608988676525" />
+    <state x="517" y="300" key="NewPhpFileDialog/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1609179248641" />
     <state x="517" y="300" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1608929455582" />
-    <state x="186" y="15" key="SettingsEditor" timestamp="1608833041977">
+    <state x="186" y="15" key="SettingsEditor" timestamp="1609084343311">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="186" y="15" key="SettingsEditor/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1607274626750" />
-    <state x="186" y="15" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1608833041977" />
+    <state x="186" y="15" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1609084343311" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1608933131198">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1607269582558" />
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738@0.0.1366.738" timestamp="1608933131198" />
-    <state x="301" y="104" key="Vcs.Push.Dialog.v2" timestamp="1608903888747">
+    <state x="301" y="104" key="Vcs.Push.Dialog.v2" timestamp="1608995419976">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="301" y="104" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1608903888747" />
+    <state x="301" y="104" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1608995419976" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1607270229559">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
