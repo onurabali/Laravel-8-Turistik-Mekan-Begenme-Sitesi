@@ -22,29 +22,15 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <i class="menu-icon typcn typcn-coffee"></i>
+            <a class="nav-link" href="{{route('admin_category')}}">
+                <i class="menu-icon typcn typcn-shopping-bag"></i>
                 <span class="menu-title">Categories</span>
-                <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('admin_category')}}">first category</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/dropdowns.html">Dropdowns</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/typography.html">Typography</a>
-                    </li>
-                </ul>
-            </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{asset('assets')}}/admin/pages/forms/basic_elements.html">
+            <a class="nav-link" href="{{route('admin_products')}}">
                 <i class="menu-icon typcn typcn-shopping-bag"></i>
-                <span class="menu-title">İmages</span>
+                <span class="menu-title">Products</span>
             </a>
         </li>
         <li class="nav-item">

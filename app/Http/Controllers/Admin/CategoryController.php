@@ -16,7 +16,6 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
         $datalist = DB::table('categories')->get();
         //print_r($datalist);
         //exit();
@@ -31,8 +30,6 @@ class CategoryController extends Controller
      */
     public function create(Request $request)
     {
-
-
         DB::table('categories')->insert([
             'parent_id' => $request->input('parent_id'),
             'title' => $request->input('title'),
