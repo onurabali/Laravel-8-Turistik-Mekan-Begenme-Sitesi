@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -11,11 +12,14 @@ Route::get('/home2', function () {
 Route::get('', function(){
     return view('home.index');
 });
-Route::redirect('/anasayfa', '/home')->name('anasayfa');
-
-Route::get('/about', [HomeController::class, 'about'])->name('about');
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::redirect('/anasayfa', '/home')->name('anasayfa');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/fag', [HomeController::class, 'fag'])->name('fag');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/references', [HomeController::class, 'references'])->name('references');
+
 //Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
 
@@ -31,24 +35,33 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('category/delete/{id}',[\App\Http\Controllers\Admin\CategoryController::class, 'destroy'])->name('admin_category_delete');
     Route::get('category/show',[\App\Http\Controllers\Admin\CategoryController::class, 'show'])->name('admin_category_show');
 
-});
-#Product
-Route::prefix('product')->group(function (){
-    Route::get('/',[\App\Http\Controllers\Admin\ProductController::class,'index'])->name('admin_products');
-    Route::get('/create',[\App\Http\Controllers\Admin\ProductController::class,'create'])->name('admin_product_add');
-    Route::post('store',[\App\Http\Controllers\Admin\ProductController::class,'store'])->name('admin_product_store');
-    Route::get('edit/{id}',[\App\Http\Controllers\Admin\ProductController::class,'edit'])->name('admin_product_edit');
-    Route::post('update/{id}',[\App\Http\Controllers\Admin\ProductController::class,'update'])->name('admin_product_update');
-    Route::get('delete/{id}',[\App\Http\Controllers\Admin\ProductController::class,'destroy'])->name('admin_product_delete');
-    Route::get('show',[\App\Http\Controllers\Admin\ProductController::class,'show'])->name('admin_product_show');
-});
+    #Product
+    Route::prefix('product')->group(function (){
+        Route::get('/',[\App\Http\Controllers\Admin\ProductController::class,'index'])->name('admin_products');
+        Route::get('/create',[\App\Http\Controllers\Admin\ProductController::class,'create'])->name('admin_product_add');
+        Route::post('store',[\App\Http\Controllers\Admin\ProductController::class,'store'])->name('admin_product_store');
+        Route::get('edit/{id}',[\App\Http\Controllers\Admin\ProductController::class,'edit'])->name('admin_product_edit');
+        Route::post('update/{id}',[\App\Http\Controllers\Admin\ProductController::class,'update'])->name('admin_product_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\Admin\ProductController::class,'destroy'])->name('admin_product_delete');
+        Route::get('show',[\App\Http\Controllers\Admin\ProductController::class,'show'])->name('admin_product_show');
+    });
 #image Gallery
-Route::prefix('image')->group(function (){
-    Route::get('create/{product_id}',[\App\Http\Controllers\Admin\ImageController::class,'create'])->name('admin_image_add');
-    Route::post('store/{product_id}',[\App\Http\Controllers\Admin\ImageController::class,'store'])->name('admin_image_store');
-    Route::get('delete/{id}/{product_id}',[\App\Http\Controllers\Admin\ImageController::class,'destroy'])->name('admin_image_delete');
-    Route::get('show',[\App\Http\Controllers\Admin\ImageController::class,'show'])->name('admin_image_show');
+    Route::prefix('image')->group(function (){
+        Route::get('create/{product_id}',[\App\Http\Controllers\Admin\ImageController::class,'create'])->name('admin_image_add');
+        Route::post('store/{product_id}',[\App\Http\Controllers\Admin\ImageController::class,'store'])->name('admin_image_store');
+        Route::get('delete/{id}/{product_id}',[\App\Http\Controllers\Admin\ImageController::class,'destroy'])->name('admin_image_delete');
+        Route::get('show',[\App\Http\Controllers\Admin\ImageController::class,'show'])->name('admin_image_show');
+    });
+
+#Setting
+    Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
+    Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class, 'update'])->name('admin_setting_update');
+
 });
+Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
+    Route::get('/',[UserController::class, 'index'])->name('myprofile');
+});
+
 Route::get('/admin/login',[HomeController::class, 'login'])->name('admin_login');
 Route::post('/admin/logincheck',[HomeController::class, 'logincheck'])->name('admin_logincheck');
 Route::get('/admin/logout',[HomeController::class, 'logout'])->name('admin_logout');

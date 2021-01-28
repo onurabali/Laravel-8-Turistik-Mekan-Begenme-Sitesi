@@ -34,15 +34,15 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{asset('assets')}}/admin/pages/charts/chartjs.html">
+            <a class="nav-link" href="{{route('admin_setting')}}">
                 <i class="menu-icon typcn typcn-th-large-outline"></i>
-                <span class="menu-title">Description</span>
+                <span class="menu-title">Setting</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{asset('assets')}}/admin/pages/tables/basic-table.html">
+            <a class="nav-link" href="{{route('home')}}">
                 <i class="menu-icon typcn typcn-bell"></i>
-                <span class="menu-title">Tables</span>
+                <span class="menu-title">HomePage</span>
             </a>
         </li>
 

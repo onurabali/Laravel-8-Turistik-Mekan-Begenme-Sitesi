@@ -5,7 +5,7 @@
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
             <a class="navbar-brand brand-logo" href="{{route('adminhome')}}">
                 <img src="{{asset('assets')}}/admin/assets/images/logo.svg" alt="logo" /> </a>
-            <a class="navbar-brand brand-logo-mini" href="index.html">
+            <a class="navbar-brand brand-logo-mini" href="{{route('adminhome')}}">
                 <img src="{{asset('assets')}}/admin/assets/images/logo-mini.svg" alt="logo" /> </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">

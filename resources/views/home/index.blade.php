@@ -1,57 +1,20 @@
 @extends('layouts.home')
-@section('title', 'My Laravel Journey and Travel Page Github')
-@section('description')
-    Türkiyenin en iyi turizm sitesi.
-@endsection
-@section('keywords','terihi yerler,deniz,hotel,göl kenarları')
+
+@section('title', $setting->title)
+@section('description') {{ $setting->description }} @endsection
+
+ @section('keywords',$setting->keywords)
 
 @section('content')
 
     @include('home._slider')
     <!-- === BEGIN CONTENT === -->
     <div id="content">
-        <div class="container no-padding">
-            <div class="row">
-                <!-- Carousel Slideshow -->
-                <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                    <!-- Carousel Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example" data-slide-to="1"></li>
-                        <li data-target="#carousel-example" data-slide-to="2"></li>
-                    </ol>
-                    <div class="clearfix"></div>
-                    <!-- End Carousel Indicators -->
-                    <!-- Carousel Images -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="{{ asset('assets') }}/img/slideshow/slide1.jpg">
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('assets') }}/img/slideshow/slide2.jpg">
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('assets') }}/img/slideshow/slide3.jpg">
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('assets') }}/img/slideshow/slide4.jpg">
-                        </div>
-                    </div>
-                    <!-- End Carousel Images -->
-                    <!-- Carousel Controls -->
-                    <a class="left carousel-control" href="#carousel-example" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                    <!-- End Carousel Controls -->
-                </div>
-                <!-- End Carousel Slideshow -->
-            </div>
+        <div class="panel-body">
+
         </div>
-        <div class="container background-gray-lighter">
-            <div class="row margin-vert-40">
+        <div div class="l-navbar" id="nav-bar">
+            <div class="col-xs-6 col-md-4 col-md-push-4">
                 <div class="col-md-4">
                     <div class="col-md-4">
                         <i class="fa-clock-o fa-5x color-primary"></i>
@@ -190,7 +153,8 @@
                     <h2 class="animate fadeIn text-center">WE ARE CURRENTLY HIRING!</h2>
                     <p class="animate fadeIn text-center">If you like to work with a creative team in a lively and friendly enviroment then call us today!.</p>
                     <p class="animate fadeInUp text-center">
-                        <button class="btn btn-primary btn-lg" type="button">View Details</button>
+                        <button class="btn btn-primary btn-lg"   type="button" >Contact Us</button>
+
                     </p>
                 </div>
             </div>

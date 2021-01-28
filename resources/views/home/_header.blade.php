@@ -1,10 +1,13 @@
+@php
+$setting=\App\Http\Controllers\HomeController::getsetting()
+@endphp
 <header>
     <div id="header">
         <div class="container">
             <div class="row">
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="index.html" title="">
+                    <a href={{route("home")}} title="">
                         <img src="{{ asset('assets') }}/img/logo.png" alt="Logo" />
                     </a>
                 </div>
@@ -19,150 +22,55 @@
                 <div class="text-center visible-lg">
                     <ul id="hornavmenu" class="nav navbar-nav">
                         <li>
-                            <a href="index.html" class="fa-home">Home</a>
+                            <a href="{{route('home')}}" class="fa-home">Home</a>
                         </li>
                         <li>
-                            <span class="fa-gears">Features</span>
-                            <ul>
-                                <li class="parent">
-                                    <span>Typography</span>
-                                    <ul>
-                                        <li>
-                                            <a href="features-typo-basic.html">Basic Typography</a>
-                                        </li>
-                                        <li>
-                                            <a href="features-typo-blockquotes.html">Blockquotes</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="parent">
-                                    <span>Components</span>
-                                    <ul>
-                                        <li>
-                                            <a href="features-labels.html">Labels</a>
-                                        </li>
-                                        <li>
-                                            <a href="features-progress-bars.html">Progress Bars</a>
-                                        </li>
-                                        <li>
-                                            <a href="features-panels.html">Panels</a>
-                                        </li>
-                                        <li>
-                                            <a href="features-pagination.html">Pagination</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="parent">
-                                    <span>Icons</span>
-                                    <ul>
-                                        <li>
-                                            <a href="features-icons.html">Icons General</a>
-                                        </li>
-                                        <li>
-                                            <a href="features-icons-social.html">Social Icons</a>
-                                        </li>
-                                        <li>
-                                            <a href="features-icons-font-awesome.html">Font Awesome</a>
-                                        </li>
-                                        <li>
-                                            <a href="features-icons-glyphicons.html">Glyphicons</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="features-testimonials.html">Testimonials</a>
-                                </li>
-                                <li>
-                                    <a href="features-accordions-tabs.html">Accordions & Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="features-buttons.html">Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="features-carousels.html">Carousels</a>
-                                </li>
-                                <li>
-                                    <a href="features-grid.html">Grid System</a>
-                                </li>
-                                <li>
-                                    <a href="features-animate-on-scroll.html">Animate On Scroll</a>
-                                </li>
+                            <a href="{{route('about')}}" class="fa-copy">AboutUs</a>
+                        </li>
+                        <li>
+                            <a href="{{route('fag')}}" class="fa-copy">Fag</a>
+                        </li>
+                        <li>
+                            <a href="{{route('references')}}" class="fa-copy">References</a>
+                        </li>
+                        <li>
+                            <a href="{{route('adminhome')}}" class="fa-copy">Admin</a>
+                        </li>
+                        <li>
+                            <a href="{{route('contact')}}" class="fa-copy">Contact</a>
+                        </li>
+                      <div class="pull-right">
+                        <li class="header-account dropdown default-dropdown">
+                          @auth
+                              <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
+                                  <div class="header-btns-icon">
+                                      <i class="fa fa-user-0"></i>
+                                  </div>
+                                  <strong class="text-uppercase">{{Auth::user()->name}} <i class="fa fa-caret-down"></i></strong>
+                              </div>
+                          @endauth
+                          @guest
+                          <a href="/login" class="uppercase" >Login</a>/<a href="register" class="uppercase" >Join</a>
+                          @endguest
+                            <ul class="custom-menu">
+                                <li> <a href="{{route('myprofile')}}">My Account</a></li>
+                                <li> <a href="{{route('logout')}} " >Logout</a></li>
+                                <li> <a href="features-icons.html">Icons General</a></li>
+                                <li> <a href="features-icons.html">Icons General</a></li>
+                                <li> <a href="features-icons.html">Icons General</a></li>
                             </ul>
-                        </li>
-                        <li>
-                            <span class="fa-copy">Pages</span>
-                            <ul>
-                                <li>
-                                    <a href="pages-about-us.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="pages-services.html">Services</a>
-                                </li>
-                                <li>
-                                    <a href="pages-faq.html">F.A.Q.</a>
-                                </li>
-                                <li>
-                                    <a href="pages-about-me.html">About Me</a>
-                                </li>
-                                <li>
-                                    <a href="pages-full-width.html">Full Width</a>
-                                </li>
-                                <li>
-                                    <a href="pages-left-sidebar.html">Left Sidebar</a>
-                                </li>
-                                <li>
-                                    <a href="pages-right-sidebar.html">Right Sidebar</a>
-                                </li>
-                                <li>
-                                    <a href="pages-login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="pages-sign-up.html">Sign-Up</a>
-                                </li>
-                                <li>
-                                    <a href="pages-404.html">404 Error Page</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="fa-th">Portfolio</span>
-                            <ul>
-                                <li>
-                                    <a href="portfolio-2-column.html">2 Column</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio-3-column.html">3 Column</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio-4-column.html">4 Column</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio-6-column.html">6 Column</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="fa-font">Blog</span>
-                            <ul>
-                                <li>
-                                    <a href="blog-list.html">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="blog-single.html">Blog Single Item</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="contact.html" class="fa-comment">Contact</a>
-                        </li>
+
+                      </li>
+
+                      </div>
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Top Menu -->
-    <div id="post_header" class="container" style="height:340px">
-    </div>
+
     <div id="content-top-border" class="container">
     </div>
     <!-- === END HEADER === -->

@@ -29,7 +29,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $datalist=Category::all();
+        $datalist = Category::with('children')->get();
         return view('admin.product_add',['datalist'=>$datalist]);
     }
 
@@ -43,7 +43,6 @@ class ProductController extends Controller
     {
         //
         $data=new Product;
-
         $data->title = $request->input('title');
         $data->keywords = $request->input('keywords');
         $data->description = $request->input('description');
@@ -79,7 +78,7 @@ class ProductController extends Controller
     public function edit(Product $product,$id)
     {
         $data=Product::find($id);
-        $datalist = Category::all();
+        $datalist = Category::with('children')->get();
 
         return view('admin.product_edit',['data'=>$data,'datalist'=>$datalist]);
     }
@@ -103,8 +102,7 @@ class ProductController extends Controller
         $data->city= $request->input('city');
         $data->country= $request->input('country');
         $data->location= $request->input('location');
-        if($request->file(('image')!=null))
-        {
+        if($request->file('image')!=null){
             $data->image=Storage::putFile('images',$request->file('image'));
         }
         $data->save();

@@ -39,45 +39,5 @@
             <!-- End Carousel Slideshow -->
         </div>
     </div>
-    <div class="container background-gray-lighter">
-        <div class="row margin-vert-40">
-            <div class="col-md-4">
-                <div class="col-md-4">
-                    <i class="fa-clock-o fa-5x color-primary"></i>
-                </div>
-                <div class="col-md-8">
-                    <h2 class="margin-top-5 margin-bottom-0">1524</h2>
-                    <p>Ziyaretçiler</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="col-md-4">
-                    <i class="fa-tachometer fa-5x color-primary"></i>
-                </div>
-                <div class="col-md-8">
-                    <h2 class="margin-top-5 margin-bottom-0">4585</h2>
-                    <p>Yorumlar</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="col-md-4">
-                    <i class="fa-users fa-5x color-primary"></i>
-                </div>
-                <div class="col-md-8">
-                    <h2 class="margin-top-5 margin-bottom-0">3685</h2>
-                    <p>Beğeniler</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container background-white">
-        <div class="row margin-vert-30">
-            <!-- Main Text -->
-            <div class="col-md-12">
-                <h2 class="text-center">Welcome to My Laravel Page</h2>
-                <p class="text-center">Türkiyenin en iyi turistik mekan arama sitesi.</p>
-                <p class="text-center">Gitmetk istediğiniz yeri gidenlerden öğrenin asdfasdfsg.</p>
-            </div>
-            <!-- End Main Text -->
-        </div>
-    </div>
+
+
