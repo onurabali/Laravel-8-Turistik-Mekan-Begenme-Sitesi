@@ -1,7 +1,9 @@
 @extends('layouts.admin')
 
 @section('title','Edit Product')
-
+@section('javascript')
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+@endsection
 
 @section('content')
     <body>
@@ -71,7 +73,10 @@
                             </div>
                             <div class="form-group">
                                 <label >Detail</label>
-                                <input type="text" name="detail" value="{{$data->detail}}" class="form-control" >
+                                <input type="text" id="editor1" name="detail"  value="{{$data->detail}}" class="form-control">
+                                <script>
+                                    CKEDITOR.replace( 'editor1' );
+                                </script>
                             </div>
                             <div class="form-group">
                                 <label >City</label>

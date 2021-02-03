@@ -41,7 +41,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
         $data=new Product;
         $data->title = $request->input('title');
         $data->keywords = $request->input('keywords');
@@ -79,7 +79,6 @@ class ProductController extends Controller
     {
         $data=Product::find($id);
         $datalist = Category::with('children')->get();
-
         return view('admin.product_edit',['data'=>$data,'datalist'=>$datalist]);
     }
 

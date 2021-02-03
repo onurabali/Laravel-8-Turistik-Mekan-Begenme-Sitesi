@@ -9,7 +9,7 @@
                 <div class="info">
                     @auth
                         <a href="#" class="d-block">{{Auth::user()->name}}</a>
-                        <a href="{{route('admin_logout')}}" class="d-block">Logout</a>
+                        <a href="{{route('logout')}}" class="d-block">Logout</a>
                     @endauth
                 </div>
             </a>
@@ -43,6 +43,12 @@
             <a class="nav-link" href="{{route('home')}}">
                 <i class="menu-icon typcn typcn-bell"></i>
                 <span class="menu-title">HomePage</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin_message')}}">
+                <i class="menu-icon typcn typcn-shopping-bag"></i>
+                <span class="menu-title">Contact Messages</span>
             </a>
         </li>
 

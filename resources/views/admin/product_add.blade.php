@@ -1,7 +1,9 @@
 @extends('layouts.admin')
 
 @section('title','Add Product')
-
+@section('javascript')
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    @endsection
 
 @section('content')
     <body>
@@ -64,11 +66,9 @@
                             </div>
                             <div class="form-group">
                                 <label >Detail</label>
-                                <textarea id="summernote" name="detail" ></textarea>
+                                <textarea id="editor1" name="detail" ></textarea>
                                 <script>
-                                    $(document).ready(function() {
-                                        $('#summernote').summernote();
-                                    });
+                                    CKEDITOR.replace( 'editor1' );
                                 </script>
                             </div>
                             <div class="form-group">
@@ -83,7 +83,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-success mr-2">Add product</button>
-                            <button class="btn btn-light">Cancel</button>
+
 
                         </form>
                     </div>

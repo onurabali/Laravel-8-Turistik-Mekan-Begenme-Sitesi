@@ -1,7 +1,9 @@
 @extends('layouts.admin')
 
 @section('title','Edit Setting')
-
+@section('javascript')
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+@endsection
 
 @section('content')
     <body>
@@ -30,7 +32,7 @@
                         <form role="form" action="{{route('admin_setting_update')}}" method="post">
                             @csrf
                             <div class="form-group">
-                            <input type="text" id="id" name="id"  value="{{$data->id}}" class="form-control" >
+                            <input type="hidden" id="id" name="id"  value="{{$data->id}}" class="form-control" >
                             </div>
                             <div class="form-group">
                                 <label >Title</label>
@@ -103,22 +105,20 @@
                             </div>
                             <div class="form-group">
                                 <label >References</label>
-                                <textarea id="references" name="references" >{{$data->references}}</textarea>
+                                <textarea id="editor1" name="references" >{{$data->references}}</textarea>
                             </div>
                             <div class="form-group">
                                 <label >About Us</label>
-                                <textarea id="aboutus" name="aboutus" >{{$data->aboutus}}</textarea>
+                                <textarea id="editor2" name="aboutus" >{{$data->aboutus}}</textarea>
                             </div>
                             <div class="form-group">
                                 <label >Contact</label>
-                                <textarea id="contact" name="contact" >{{$data->contact}}</textarea>
+                                <textarea id="editor3" name="contact" >{{$data->contact}}</textarea>
                             </div>
                             <script>
-                                $(document).ready(function () {
-                                    $('#references').summernote();
-                                    $('#aboutus').summernote();
-                                    $('#contact').summernote();
-                                });
+                                CKEDITOR.replace( 'editor1' );
+                                CKEDITOR.replace( 'editor2' );
+                                CKEDITOR.replace( 'editor3' );
                             </script>
 
 

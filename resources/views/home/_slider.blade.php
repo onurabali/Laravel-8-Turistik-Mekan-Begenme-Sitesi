@@ -1,43 +1,43 @@
 <div id="content">
     <div class="container no-padding">
         <div class="row">
-            <!-- Carousel Slideshow -->
-            <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                <!-- Carousel Indicators -->
+            @php
+                $i=0;
+            @endphp
+            @foreach($slider as $rs)
+                @php
+                    $i=$i+1;
+                @endphp
+            <div id="carousel-example-1" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example" data-slide-to="1"></li>
-                    <li data-target="#carousel-example" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-1" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-1" data-slide-to="2"></li>
                 </ol>
-                <div class="clearfix"></div>
-                <!-- End Carousel Indicators -->
-                <!-- Carousel Images -->
-                <div class="carousel-inner">
+                <!-- Wrapper for slides -->
+
+                <div class="carousel-inner @if($i==1) active @endif" >
                     <div class="item active">
-                        <img src="{{ asset('assets') }}/img/slideshow/slide1.jpg">
+                        <img src="{{Storage::url($rs->image)}}" style="height:250px" alt="" >
+                        <h4>{{$rs->title}}</h4>
+                        <h4>{{$rs->city}}</h4>
+                        <p class="animate fadeInUp text-center">
+                            <a href="{{route('product',['id'=>$rs->id,'city'=>$rs->city])}}" class="btn btn-primary btn-lg" type="button">View Details</a>
+                        </p>
+
                     </div>
-                    <div class="item">
-                        <img src="{{ asset('assets') }}/img/slideshow/slide2.jpg">
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('assets') }}/img/slideshow/slide3.jpg">
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('assets') }}/img/slideshow/slide4.jpg">
-                    </div>
+
                 </div>
-                <!-- End Carousel Images -->
-                <!-- Carousel Controls -->
-                <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-1" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
-                <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                <a class="right carousel-control" href="#carousel-example-1" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
-                <!-- End Carousel Controls -->
             </div>
-            <!-- End Carousel Slideshow -->
+            @endforeach
         </div>
     </div>
-
-
