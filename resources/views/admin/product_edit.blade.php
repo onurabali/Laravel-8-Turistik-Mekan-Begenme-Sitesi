@@ -58,7 +58,7 @@
                                 <label >İmage</label>
                                 <input type="file" name="image" class="form-control" >
                                 @if($data->image)
-                                    <img src="{{Storage::url($data->image)}}" height="60" alt="">
+                                    <img src="{{\Illuminate\Support\Facades\Storage::url($data->image)}}" height="60" alt="">
                                 @endif
                             </div>
 
@@ -73,9 +73,9 @@
                             </div>
                             <div class="form-group">
                                 <label >Detail</label>
-                                <input type="text" id="editor1" name="detail"  value="{{$data->detail}}" class="form-control">
+                                <input type="text" id="detail" name="detail"  value="{{$data->detail}}" class="form-control">
                                 <script>
-                                    CKEDITOR.replace( 'editor1' );
+                                    CKEDITOR.replace( 'detail' );
                                 </script>
                             </div>
                             <div class="form-group">

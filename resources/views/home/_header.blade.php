@@ -28,7 +28,7 @@
                             <a href="{{route('about')}}" class="fa-copy">About Us</a>
                         </li>
                         <li>
-                            <a href="{{route('fag')}}" class="fa-copy">Fag</a>
+                            <a href="{{route('faq')}}" class="fa-copy">Faq</a>
                         </li>
                         <li>
                             <a href="{{route('references')}}" class="fa-copy">References</a>
@@ -72,6 +72,9 @@
                             <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
                         </form>
                         @livewireScripts
+                        @section('footerjs')
+                            @livewireScripts
+                        @endsection
 
                     </div>
                 </div>

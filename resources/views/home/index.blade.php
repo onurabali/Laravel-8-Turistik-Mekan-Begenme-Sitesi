@@ -65,19 +65,19 @@
                                 <!-- Portfolio Item -->
                                 <h2 class="text-center">Daily Places</h2>
                                 @foreach($daily as $rs)
-                                <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
+                                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
 
-                                    <a href="{{route('product',['id'=>$rs->id,'city'=>$rs->city])}}">
-                                        <figure class="animate fadeInLeft">
-                                            <img alt="thumb1"  src="{{Storage::url($rs->image)}}">
-                                            <figcaption>
-                                                <h3>{{($rs->title)}}</h3>
-                                                <p>{{($rs->description)}}</p>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                            @endforeach
+                                        <a href="{{route('product',['id'=>$rs->id,'city'=>$rs->city])}}">
+                                            <figure class="animate fadeInLeft">
+                                                <img alt="thumb1"  src="{{Storage::url($rs->image)}}">
+                                                <figcaption>
+                                                    <h3>{{($rs->title)}}</h3>
+                                                    <p>{{($rs->description)}}</p>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                @endforeach
 
                             </ul>
                             <ul class="portfolio-group">

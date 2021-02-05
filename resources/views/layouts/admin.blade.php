@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title')</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="{{asset('assets')}}/admin/assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet"
+          href="{{asset('assets')}}/admin/assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="{{asset('assets')}}/admin/assets/vendors/iconfonts/ionicons/dist/css/ionicons.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/admin/assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet"
+          href="{{asset('assets')}}/admin/assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="{{asset('assets')}}/admin/assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="{{asset('assets')}}/admin/assets/vendors/css/vendor.bundle.addons.css">
     <!-- endinject -->
@@ -20,18 +22,18 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="{{asset('assets')}}/admin/assets/css/demo_1/style.css">
     <!-- End Layout styles -->
-    <link rel="shortcut icon" href="{{asset('assets')}}/admin/assets/images/favicon.ico" />
-      @yield('css')
-      @yield('javascript')
-  </head>
+    <link rel="shortcut icon" href="{{asset('assets')}}/admin/assets/images/favicon.ico"/>
+    @yield('css')
+    @yield('javascript')
+</head>
 <body>
-  <div class="content-wrapper">
-    @include('admin._header')
-    @include('admin._sidebar')
-    @yield('content')
+<div class="content-wrapper">
+@include('admin._header')
+@include('admin._sidebar')
+@yield('content')
 @include('admin._footer')
 
 @yield('footer')
 
-    </body>
+</body>
 </html>

@@ -28,6 +28,12 @@
                                 </h2>
                             </div>
                             <div class="blog-post-details">
+                                <div>
+                                    @php
+                                        $avgcom=\App\Http\Controllers\HomeController::avgcom($data->id);
+                                        $countcomment=\App\Http\Controllers\HomeController::countcomment($data->id);
+                                    @endphp
+                                </div>
                                 <!-- Author Name -->
                                 <div class="blog-post-details-item blog-post-details-item-left user-icon">
                                     <i class="fa fa-user color-gray-light"></i>
@@ -37,23 +43,28 @@
                                 <!-- Date -->
                                 <div class="blog-post-details-item blog-post-details-item-left">
                                     <i class="fa fa-calendar color-gray-light"></i>
-                                    <a href="#">22nd Apr, 2014</a>
+                                    <a href="#">{{$data->created_at}}</a>
                                 </div>
                                 <!-- End Date -->
                                 <!-- Tags -->
                                 <div class="blog-post-details-item blog-post-details-item-left blog-post-details-tags">
                                     <i class="fa fa-tag color-gray-light"></i>
-                                    <a href="#">PHP</a>,
-                                    <a href="#">Javascript</a>,
-                                    <a href="#">CoffeeScript</a>
+                                    <i class="fa fa-star @if($avgcom<1) -o empty @endif"></i>
+                                    <i class="fa fa-star @if($avgcom<2) -o empty @endif"></i>
+                                    <i class="fa fa-star @if($avgcom<3) -o empty @endif"></i>
+                                    <i class="fa fa-star @if($avgcom<4) -o empty @endif"></i>
+                                    <i class="fa fa-star @if($avgcom<5) -o empty @endif"></i>
                                 </div>
                                 <!-- End Tags -->
                                 <!-- # of Comments -->
+
+
+
                                 <div
                                     class="blog-post-details-item blog-post-details-item-left blog-post-details-item-last">
                                     <a href="">
                                         <i class="fa fa-comments color-gray-light"></i>
-                                        3 Comments
+                                        {{$countcomment}} Comments {{$avgcom}}
                                     </a>
                                 </div>
                                 <!-- End # of Comments -->
@@ -99,119 +110,32 @@
                                     <!-- Comments -->
                                     <div class="blog-recent-comments panel panel-default margin-bottom-30">
                                         <div class="panel-heading">
-                                            <h3>Comments</h3>
+                                            <h3>Comments ({{$countcomment}})</h3>
                                         </div>
                                         <ul class="list-group">
-                                            <li class="list-group-item">
-                                                <div class="row">
-                                                    <div class="col-md-2 profile-thumb">
-                                                        <a href="#">
-                                                            <img class="media-object" src="assets/img/profiles/99.jpg"
-                                                                 alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-md-10">
-                                                        <h4>Great Article</h4>
-                                                        <p>Donec id erum quidem rerumd facilis est et expedita
-                                                            distinctio lorem ipsum dolorlit non mi portas sats eget
-                                                            metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                                                            mauris condimentum nibh, ut
-                                                            fermentum massa justo sit amet risus. Etiam porta sem
-                                                            malesuada magna..</p>
-                                                        <span class="date">
-                                                                <i class="fa fa-clock-o color-gray-light"></i>5 hours ago</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <div class="row">
-                                                    <div class="col-md-2 profile-thumb">
-                                                        <a href="#">
-                                                            <img class="media-object" src="assets/img/profiles/53.jpg"
-                                                                 alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-md-10">
-                                                        <h4>A quick question</h4>
-                                                        <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                                                            clita kasd gubergren, no sea takimata sanctus est Lorem
-                                                            ipsum dolor sit amet.</p>
-                                                        <p>Donec id erum quidem rerumd facilis est et expedita
-                                                            distinctio lorem ipsum dolorlit non mi portas sats eget
-                                                            metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                                                            mauris condimentum nibh, ut
-                                                            fermentum massa justo sit amet risus. Etiam porta sem
-                                                            malesuada magna.</p>
-                                                        <span class="date">
-                                                                <i class="fa fa-clock-o color-gray-light"></i>12 May 2013</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <div class="row">
-                                                    <div class="col-md-2 profile-thumb">
-                                                        <a href="#">
-                                                            <img class="media-object" src="assets/img/profiles/37.jpg"
-                                                                 alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-md-10">
-                                                        <h4>Thank you!</h4>
-                                                        <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                                                            clita kasd gubergren, no sea takimata sanctus est Lorem
-                                                            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                                            sadipscing elitr,
-                                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                                            magna aliquyam erat, sed diam voluptua.</p>
-                                                        <span class="date">
-                                                                <i class="fa fa-clock-o color-gray-light"></i>10 May 2013</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <!-- Comment Form -->
-                                            <li class="list-group-item">
-                                                <div class="blog-comment-form">
-                                                    <div class="row margin-top-20">
-                                                        <div class="col-md-12">
-                                                            <div class="pull-left">
-                                                                <h3>Leave a Comment</h3>
+                                            @foreach($comments as $rs)
+                                                <li class="list-group-item">
+                                                    <div class="row">
+                                                        <div class="col-md-10">
+                                                            <h4>{{$rs->user->name}}</h4>
+                                                            <h5>{{$rs->subject}}</h5>
+                                                            <p>{{$rs->comment}}</p>
+                                                            <span class="date">
+                                                                <i class="fa fa-clock-o color-gray-light"></i>{{$rs->created_at}}</span>
+                                                            <div class="review-rating pull-right">
+                                                                <i class="fa fa-star @if($rs->rate<1) -o empty @endif"></i>
+                                                                <i class="fa fa-star @if($rs->rate<2) -o empty @endif"></i>
+                                                                <i class="fa fa-star @if($rs->rate<3) -o empty @endif"></i>
+                                                                <i class="fa fa-star @if($rs->rate<4) -o empty @endif"></i>
+                                                                <i class="fa fa-star @if($rs->rate<5) -o empty @endif"></i>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row margin-top-20">
-                                                        <div class="col-md-12">
-                                                            <form>
-                                                                <label>Name</label>
-                                                                <div class="row margin-bottom-20">
-                                                                    <div class="col-md-7 col-md-offset-0">
-                                                                        <input class="form-control" type="text">
-                                                                    </div>
-                                                                </div>
-                                                                <label>Email
-                                                                    <span>*</span>
-                                                                </label>
-                                                                <div class="row margin-bottom-20">
-                                                                    <div class="col-md-7 col-md-offset-0">
-                                                                        <input class="form-control" type="text">
-                                                                    </div>
-                                                                </div>
-                                                                <label>Message</label>
-                                                                <div class="row margin-bottom-20">
-                                                                    <div class="col-md-11 col-md-offset-0">
-                                                                        <textarea class="form-control"
-                                                                                  rows="8"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                                <p>
-                                                                    <button class="btn btn-primary" type="submit">Send
-                                                                        Message
-                                                                    </button>
-                                                                </p>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                                </li>
+
+                                        @endforeach
+                                        <!-- Comment Form -->
+                                            @livewire('comment',['id'=>$data->id])
                                             <!-- End Comment Form -->
                                         </ul>
                                     </div>

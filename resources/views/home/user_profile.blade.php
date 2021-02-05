@@ -18,10 +18,10 @@
             <div class="container">
                 <div class="row">
                     <div id="aside" class="col-md-2">
-                        @include('home.usermenu')
+                       @include('home.usermenu')
                     </div>
                     <div id="aside" class="col-md-10">
-                        @include('profile.show')
+{{--                       @include('profile.show')--}}
                     </div>
                 </div>
             </div>

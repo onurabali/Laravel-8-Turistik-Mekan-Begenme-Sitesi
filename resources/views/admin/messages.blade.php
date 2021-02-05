@@ -34,6 +34,7 @@
                             <th>Message</th>
                             <th>İp</th>
                             <th>AdminNote</th>
+                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                         </thead>

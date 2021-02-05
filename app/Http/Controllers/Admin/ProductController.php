@@ -52,6 +52,7 @@ class ProductController extends Controller
         $data->city= $request->input('city');
         $data->country= $request->input('country');
         $data->location= $request->input('location');
+        $data->status=$request->input('status');
         $data->image=Storage::putFile('images',$request->file('image'));
 
         $data->save();
@@ -101,6 +102,7 @@ class ProductController extends Controller
         $data->city= $request->input('city');
         $data->country= $request->input('country');
         $data->location= $request->input('location');
+        $data->status=$request->input('status');
         if($request->file('image')!=null){
             $data->image=Storage::putFile('images',$request->file('image'));
         }

@@ -20,10 +20,15 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/css/nexus.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets') }}/css/responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets') }}/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="/path/to/cdn/bootstrap.min.css">
+
+    <script src="/path/to/jquery.min.js"></script>
+
     <!-- Google Fonts-->
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=PT+Sans" type="text/css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
     @yield('css')
     @yield('headerjs')
 

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Livewire\Comment;
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Image;
 use App\Models\Message;
 use App\Models\Product;
@@ -21,6 +23,14 @@ class HomeController extends Controller
     public static function getsetting()
     {
         return Setting::first();
+    }
+    public static function countcomment($id)
+    {
+        return \App\Models\Comment::where('product_id',$id)->count();
+    }
+    public static function avgcom($id)
+    {
+        return \App\Models\Comment::where('product_id',$id)->average('rate');
     }
 
     public function index()
@@ -47,9 +57,10 @@ class HomeController extends Controller
     {
         $data = Product::find($id);
         $datalist=Image::where('product_id',$id)->get();
+        $comments=\App\Models\Comment::where('product_id',$id)->get();
         #print_r($data);
         #exit();
-        return view('home.product_detail', ['data'=>$data,'datalist'=>$datalist]);
+        return view('home.product_detail', ['data'=>$data,'datalist'=>$datalist,'comments'=>$comments]);
     }
 
     public function getproduct(Request $request)
@@ -72,9 +83,6 @@ class HomeController extends Controller
         return view('home.search_products',['search'=>$search,'datalist'=>$datalist]);
     }
 
-
-
-
     public function categoryproducts($id, $keywords)
     {
         $datalist = Product::where('category_id', $id)->get();
@@ -91,9 +99,10 @@ class HomeController extends Controller
         return view('home.about', ['setting' => $setting, 'page' => 'home']);
     }
 
-    public function fag()
+    public function faq()
     {
-        return view('home.fag');
+        $datalist = Faq::all();
+        return view('home.faq',['datalist' => $datalist]);
     }
 
     public function references()

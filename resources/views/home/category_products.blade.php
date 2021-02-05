@@ -65,7 +65,7 @@
                                 <!-- Date -->
                                 <div class="blog-post-details-item blog-post-details-item-left">
                                     <i class="fa fa-calendar color-gray-light"></i>
-                                    <a href="#">22nd Apr, 2014</a>
+                                    <a href="#">{{$rs->created_at}}</a>
                                 </div>
                                 <!-- End Date -->
                                 <!-- Tags -->
