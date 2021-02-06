@@ -59,7 +59,7 @@
                                 <!-- Author Name -->
                                 <div class="blog-post-details-item blog-post-details-item-left">
                                     <i class="fa fa-user color-gray-light"></i>
-                                    <a href="#">Admin</a>
+                                    <a href="#">{{Auth::user()->name}}</a>
                                 </div>
                                 <!-- End Author Name -->
                                 <!-- Date -->
@@ -71,7 +71,7 @@
                                 <!-- Tags -->
                                 <div class="blog-post-details-item blog-post-details-item-left blog-post-details-tags">
                                     <i class="fa fa-tag color-gray-light"></i>
-                                    <a href="#">PHP</a>
+                                    <a href="#">{{$rs->keywords}}</a>
 
                                 </div>
                                 <!-- End Tags -->
@@ -80,7 +80,7 @@
                                     class="blog-post-details-item blog-post-details-item-left blog-post-details-item-last">
                                     <a href="">
                                         <i class="fa fa-comments color-gray-light"></i>
-                                        7 Comments
+{{--                                        ({{$countcomment}}) Comments--}}
                                     </a>
                                 </div>
                                 <!-- End # of Comments -->

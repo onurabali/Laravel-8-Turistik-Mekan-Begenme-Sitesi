@@ -54,10 +54,12 @@
                                 @endguest
                                 <ul class="custom-menu">
                                     <li><a href="{{route('myprofile')}}">My Account</a></li>
-                                    <li><a href="{{route('logout')}} ">Logout</a></li>
+                                    <li><a href="{{route('mycomments')}} ">My Comments</a></li>
+                                    <li><a href="{{route('user_products')}}">Myplaces</a></li>
                                     <li><a href="{{route('adminhome')}}">Admin</a></li>
-                                    <li><a href="features-icons.html">Icons General</a></li>
-                                    <li><a href="features-icons.html">Icons General</a></li>
+                                    <li><a href="{{route('logout')}} ">Logout</a></li>
+
+
                                 </ul>
 
                             </li>

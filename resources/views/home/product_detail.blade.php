@@ -37,7 +37,7 @@
                                 <!-- Author Name -->
                                 <div class="blog-post-details-item blog-post-details-item-left user-icon">
                                     <i class="fa fa-user color-gray-light"></i>
-                                    <a href="#">Admin</a>
+                                    <a href="#">{{Auth::user()->name}}</a>
                                 </div>
                                 <!-- End Author Name -->
                                 <!-- Date -->
@@ -85,27 +85,7 @@
                                 </div>
                                 <div class="blog-item-footer">
                                     <!-- About the Author -->
-                                    <div class="blog-author panel panel-default margin-bottom-30">
-                                        <div class="panel-heading">
-                                            <h3>About the Author</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <img class="pull-left" src="assets/img/profiles/87.jpg"
-                                                         alt="image1">
-                                                </div>
-                                                <div class="col-md-10">
-                                                    <label>John Doe</label>
-                                                    <p>Lorem ipsum dolor sit amet, in pri offendit ocurreret. Vix sumo
-                                                        ferri an. pfs adodio fugit delenit ut qui. Omittam suscipiantur
-                                                        ex vel,ex audiam intellegat gfIn labitur discere eos, nam an
-                                                        feugiat
-                                                        voluptua.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <!-- End About the Author -->
                                     <!-- Comments -->
                                     <div class="blog-recent-comments panel panel-default margin-bottom-30">

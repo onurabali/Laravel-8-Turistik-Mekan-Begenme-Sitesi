@@ -36,10 +36,10 @@ class HomeController extends Controller
     public function index()
     {
         $setting = Setting::first();
-        $slider = Product::select('id', 'title', 'image', 'city','description')->limit(4)->get();
-        $daily = Product::select('id', 'title', 'image', 'city','description')->limit(4)->inRandomOrder()->get();
-        $last = Product::select('id', 'title', 'image', 'city','description')->limit(4)->orderByDesc('id')->get();
-        $picked = Product::select('id', 'title', 'image', 'city','description')->limit(4)->inRandomOrder()->get();
+        $slider = Product::select('id', 'title', 'image', 'city','description')->limit(2)->get();
+        $daily = Product::select('id', 'title', 'image', 'city','description')->limit(2)->inRandomOrder()->get();
+        $last = Product::select('id', 'title', 'image', 'city','description')->limit(2)->orderByDesc('id')->get();
+        $picked = Product::select('id', 'title', 'image', 'city','description')->limit(2)->inRandomOrder()->get();
        # print_r($picked);
        # exit();
         $data = [
