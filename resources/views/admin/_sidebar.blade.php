@@ -4,7 +4,9 @@
         <li class="nav-item nav-profile">
             <a href="#" class="nav-link">
                 <div class="profile-image">
-                    <img class="img-xs rounded-circle" src="{{ asset('assets/admin/assets/images/faces/face8.jpg') }}" alt="profile image">
+                    @if(Auth::user()->profile_photo_path)
+                        <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" class="img-xs rounded-circle" alt="profile image">
+                    @endif
                     <div class="dot-indicator bg-success"></div>
                 </div>
                 <div class="text-wrapper">
@@ -52,6 +54,12 @@
             <a class="nav-link" href="{{route('admin_comment')}}">
                 <i class="menu-icon typcn typcn-th-large-outline"></i>
                 <span class="menu-title">Comments</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin_users')}}">
+                <i class="menu-icon typcn typcn-th-large-outline"></i>
+                <span class="menu-title">Users</span>
             </a>
         </li>
         <li class="nav-item">

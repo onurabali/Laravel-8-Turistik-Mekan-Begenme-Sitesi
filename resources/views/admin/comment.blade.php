@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Products List')
+@section('title','Comments List')
 
 
 @section('content')
@@ -42,6 +42,12 @@
 
                             <tr>
                                 <td>{{$rs->id}}</td>
+                                <td>
+                                    <a href="{{route('admin_user_show',['id'=>$rs->user->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')">
+                                        {{$rs->user->name}}
+                                    </a>
+
+                                </td>
                                 <td>
                                     <a href="{{route('product',['id'=>$rs->product->id,'city'=>$rs->product->city])}}"
                                        target="_blank">

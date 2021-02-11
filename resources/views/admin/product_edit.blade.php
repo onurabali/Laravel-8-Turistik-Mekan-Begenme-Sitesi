@@ -73,7 +73,7 @@
                             </div>
                             <div class="form-group">
                                 <label >Detail</label>
-                                <input type="text" id="detail" name="detail"  value="{{$data->detail}}" class="form-control">
+                                <input  id="detail" name="detail"  value="{{$data->detail}}" class="form-control">
                                 <script>
                                     CKEDITOR.replace( 'detail' );
                                 </script>

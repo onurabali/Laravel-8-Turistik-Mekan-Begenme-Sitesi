@@ -4,6 +4,10 @@
             @php
                 $i=0;
             @endphp
+            <div class="item active" >
+                <img src="{{asset('assets/img/slideshow/slide3.jpg')}}">
+            </div>
+
             @foreach($slider as $rs)
                 @php
                     $i=$i+1;
@@ -18,7 +22,7 @@
                 <!-- Wrapper for slides -->
 
                 <div class="carousel-inner @if($i==1) active @endif" >
-                    <div class="item active">
+                    <div class="item">
                         <img src="{{Storage::url($rs->image)}}" style="height:250px" alt="" >
                         <h4>{{$rs->title}}</h4>
                         <h4>{{$rs->city}}</h4>

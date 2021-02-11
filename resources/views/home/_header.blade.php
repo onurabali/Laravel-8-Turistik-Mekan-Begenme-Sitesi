@@ -37,6 +37,7 @@
                         <li>
                             <a href="{{route('contact')}}" class="fa-copy">Contact</a>
                         </li>
+
                         <div class="pull-right">
                             <li class="header-account dropdown default-dropdown">
                                 @auth
@@ -46,7 +47,7 @@
                                             <i class="fa fa-user-0"></i>
                                         </div>
                                         <strong class="text-uppercase">{{Auth::user()->name}} <i
-                                                class="fa fa-caret-down"></i>{{Auth::user()->roles->pluck('name')}}</strong>
+                                                class="fa fa-caret-down"></i></strong>
                                     </div>
                                 @endauth
                                 @guest

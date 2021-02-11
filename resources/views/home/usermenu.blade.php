@@ -8,9 +8,9 @@
         <li><a href="{{route('mycomments')}}">My Messages</a></li>
         <li><a href="{{route('logout')}}">Logout</a></li>
         @php
-        $userroles=Auth::user()->roles->pluck('name');
+        $userRoles=Auth::user()->roles->pluck('name');
         @endphp
-        @if(!$userroles->contains('admin'))
+        @if($userRoles->contains('admin'))
             <li><a href="{{route('adminhome')}}" target="_blank">Admin Panel</a></li>
             @endif
     </ul>

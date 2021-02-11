@@ -44,7 +44,8 @@
                                         <th>İd</th> <td>{{ $data->id }}</td>
                                     </tr>
                                     <tr>
-                                        <th>user Name</th> <td>{{ $data->user->name}}</td>
+                                        <th>User Name</th>
+                                        <td> {{ $data->user->name}}</td>
                                     </tr>
                                     <tr>
                                         <th>title</th> <td>{{ $data->product->title}}</td>
