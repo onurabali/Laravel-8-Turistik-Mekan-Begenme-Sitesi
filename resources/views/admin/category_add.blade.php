@@ -50,10 +50,7 @@
                                 <label >Description</label>
                                 <input type="text" name="description" class="form-control" placeholder="Enter Description">
                             </div>
-                            <div class="form-group">
-                                <label >İmage</label>
-                                <input type="text" name="image" class="form-control" placeholder="Enter İmage">
-                            </div>
+
                             <div class="form-group">
                                 <label >Status</label>
                                 <select class="form-control form-control-lg" name="status">

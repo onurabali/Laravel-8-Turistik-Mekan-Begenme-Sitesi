@@ -1,16 +1,19 @@
+<!-- partial:partials/_sidebar.html -->
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <li class="nav-item nav-profile">
             <a href="#" class="nav-link">
                 <div class="profile-image">
-                    <img class="img-xs rounded-circle" src="{{asset('assets')}}/admin/assets/images/faces/face8.jpg" alt="profile image">
+                    <img class="img-xs rounded-circle" src="{{ asset('assets/admin/assets/images/faces/face8.jpg') }}" alt="profile image">
                     <div class="dot-indicator bg-success"></div>
                 </div>
-                <div class="info">
+                <div class="text-wrapper">
                     @auth
-                        <a href="#" class="d-block">{{Auth::user()->name}}</a>
-                        <a href="{{route('logout')}}" class="d-block">Logout</a>
+                        <a href="{{route("adminhome")}}" class="d-block">{{\Illuminate\Support\Facades\Auth::user()-> name  }}</a>
+                        <a href="{{route('logout')}}">Logout</a>
+
                     @endauth
+
                 </div>
             </a>
         </li>

@@ -46,7 +46,7 @@
                                             <i class="fa fa-user-0"></i>
                                         </div>
                                         <strong class="text-uppercase">{{Auth::user()->name}} <i
-                                                class="fa fa-caret-down"></i></strong>
+                                                class="fa fa-caret-down"></i>{{Auth::user()->roles->pluck('name')}}</strong>
                                     </div>
                                 @endauth
                                 @guest
@@ -56,7 +56,6 @@
                                     <li><a href="{{route('myprofile')}}">My Account</a></li>
                                     <li><a href="{{route('mycomments')}} ">My Comments</a></li>
                                     <li><a href="{{route('user_products')}}">Myplaces</a></li>
-                                    <li><a href="{{route('adminhome')}}">Admin</a></li>
                                     <li><a href="{{route('logout')}} ">Logout</a></li>
 
 
