@@ -35,7 +35,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{route('admin_products')}}">
                 <i class="menu-icon typcn typcn-shopping-bag"></i>
-                <span class="menu-title">Products</span>
+                <span class="menu-title">Places</span>
             </a>
         </li>
         <li class="nav-item">

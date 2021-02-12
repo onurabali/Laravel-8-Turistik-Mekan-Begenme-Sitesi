@@ -57,6 +57,12 @@
                                     <li><a href="{{route('myprofile')}}">My Account</a></li>
                                     <li><a href="{{route('mycomments')}} ">My Comments</a></li>
                                     <li><a href="{{route('user_products')}}">Myplaces</a></li>
+{{--                                    @php--}}
+{{--                                  $userRoles=Auth::user()->roles->pluck('name');--}}
+{{--                                    @endphp--}}
+{{--                                    @if($userRoles->contains('admin'))--}}
+{{--                                        <li><a href="{{route('adminhome')}}" target="_blank">Admin Panel</a></li>--}}
+{{--                                    @endif--}}
                                     <li><a href="{{route('logout')}} ">Logout</a></li>
 
 

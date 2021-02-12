@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Products List')
+@section('title','Places List')
 
 
 @section('content')
@@ -17,8 +17,8 @@
     </section>
         <!-- partial -->
         <div class="card-header">
-            <h3 class="card-title">Products List</h3>
-            <a class="btn btn-primary btn-fw" href="{{route('admin_product_add')}}" type="button" >Add Product</a>
+            <h3 class="card-title">Places List</h3>
+            <a class="btn btn-primary btn-fw" href="{{route('admin_product_add')}}" type="button" >Add Place</a>
 
         </div>
             <div class="card">

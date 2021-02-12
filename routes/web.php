@@ -114,7 +114,7 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 });
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function () {
 
-    Route::get('/profile', [UserController::class, 'index'])->name('userprofile');
+    Route::get('user/profile', [UserController::class, 'index'])->name('userprofile');
     #Product
     Route::prefix('product')->group(function () {
         Route::get('/', [ProductController::class, 'index'])->name('user_products');

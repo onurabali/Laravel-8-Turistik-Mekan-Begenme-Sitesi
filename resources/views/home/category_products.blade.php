@@ -59,7 +59,7 @@
                                 <!-- Author Name -->
                                 <div class="blog-post-details-item blog-post-details-item-left">
                                     <i class="fa fa-user color-gray-light"></i>
-                                    <a href="#">{{Auth::user()->name}}</a>
+                                    <a href="#"></a>
                                 </div>
                                 <!-- End Author Name -->
                                 <!-- Date -->

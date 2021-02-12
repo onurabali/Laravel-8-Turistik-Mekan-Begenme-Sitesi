@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Edit Product')
+@section('title','Edit Place')
 @section('javascript')
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 @endsection
@@ -24,11 +24,11 @@
         <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
-                <h3>Edit Product</h3>
+                <h3>Edit Place</h3>
                 <div class="card">
                     <div class="card-body">
 
-                        <p class="card-description"> Product Edit Form </p>
+                        <p class="card-description"> Place Edit Form </p>
                         <form role="form" action="{{route('admin_product_update',['id'=>$data->id])}}" method="post">
                             @csrf
                             <div class="form-group">

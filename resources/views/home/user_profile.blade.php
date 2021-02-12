@@ -21,8 +21,8 @@
                        @include('home.usermenu')
                     </div>
                     <div id="aside" class="col-md-10">
-{{--                       @include('profile.show')--}}
-                    </div>
+                  @include('profile.show')
+                  </div>
                 </div>
             </div>
         </div>

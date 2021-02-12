@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12d04b43-9bae-4d9e-835c-3c62673a9551" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_roles.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_show.blade.php" afterDir="false" />
+    <list default="true" id="12d04b43-9bae-4d9e-835c-3c62673a9551" name="Default Changelist" comment="User Role Management">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/comment_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comment_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/product_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/category_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/category_products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/faq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/product_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/product_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -241,7 +239,8 @@
       <workItem from="1612866645584" duration="129000" />
       <workItem from="1612956057904" duration="1388000" />
       <workItem from="1613037585335" duration="15827000" />
-      <workItem from="1613064651554" duration="1052000" />
+      <workItem from="1613064651554" duration="8050000" />
+      <workItem from="1613119706258" duration="6117000" />
     </task>
     <task id="LOCAL-00001" summary="index Changed">
       <created>1607274798241</created>
@@ -313,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613037733365</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="User Role Management">
+      <created>1613065836207</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613065836207</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +336,8 @@
     <MESSAGE value="Frequently Asked Question" />
     <MESSAGE value="User Place Management CRUD" />
     <MESSAGE value="User And Admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="User And Admin" />
+    <MESSAGE value="User Role Management" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Role Management" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="8" width="816" height="730" key="#Intentions" timestamp="1610385574288">
@@ -349,10 +356,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="294" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1611250495476" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1613037732022">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1613124210171">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1613037732022" />
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1613124210171" />
     <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1611867732044" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1612379186088">
       <screen x="0" y="0" width="1366" height="738" />
@@ -393,10 +400,10 @@
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1607269582558" />
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738@0.0.1366.738" timestamp="1608933131198" />
-    <state x="301" y="104" key="Vcs.Push.Dialog.v2" timestamp="1613037738462">
+    <state x="301" y="104" key="Vcs.Push.Dialog.v2" timestamp="1613065839912">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="301" y="104" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1613037738462" />
+    <state x="301" y="104" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1613065839912" />
     <state x="301" y="104" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1611867755498" />
     <state x="565" y="256" width="316" height="266" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1612536593656">
       <screen x="0" y="0" width="1366" height="738" />
